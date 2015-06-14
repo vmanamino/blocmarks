@@ -76,4 +76,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  # secret key token set to env variable
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
+  
+  # host to link to
+  config.action_mailer.default_url_options = {host: 'viral-blocmarks.herokuapp.com'}
 end
