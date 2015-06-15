@@ -4,29 +4,23 @@ class IncomingController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
   
   def create
-    @user = User.find_by(email: params[:sender])
-    @topic = Topic.new
-    @topic.title = params[:subject]
-    @topic.user = @user
-    @url = params["body-plain"]
-        
-    if @user.nil?
-      @user = User.new
-      @user.name = 'Namenlos'
-      @user.email = 'example@mail.com'
+    puts "INCOMING PARAMS HERE #{params}"
+    @name = params[:sender]
+    @subject = params[:subject]
+    @url = params['body-plain']
+    
+    if @name.nil?
+      @name = "viral"
     end
     
-    if @topic.nil?
-      @topic = Topic.new
-      @topic.title = "Random"
-      @topic.user = @user
+    if @subject.nil?
+      @subject = 'random musings'
     end
     
     @bookmark = Bookmark.new
     @bookmark.url = @url
-    @bookmark.topic = @topic
+    @bookmark.topic = @subject
     @bookmark.save
-    
     head 200
   end
 end
