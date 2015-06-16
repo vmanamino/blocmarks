@@ -21,7 +21,7 @@ class IncomingController < ApplicationController
     end
 
     @url = params['body-plain']
-    @bookmark = Bookmark.new(params.require(:bookmark).permit(:url, :topic))
+    @bookmark = Bookmark.new
     @bookmark.url = @url
     @bookmark.topic = @topic
     @bookmark.save
