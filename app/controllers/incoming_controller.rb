@@ -6,7 +6,7 @@ class IncomingController < ApplicationController
     @from = params[:sender]
     @user = User.find_by(email: @from)
     if @user.nil?
-      @user = User.new(params.require(:user).permit(:email))
+      @user = User.new
       @user.email = @from
       @user.skip_confirmation!
       @user.save!
@@ -24,7 +24,7 @@ class IncomingController < ApplicationController
     @bookmark = Bookmark.new
     @bookmark.url = @url
     @bookmark.topic = @topic
-    @bookmark.save
+    @bookmark.save!
 
     head 200
   end
