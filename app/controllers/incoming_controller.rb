@@ -10,7 +10,7 @@ class IncomingController < ApplicationController
       @user.email = @from
       @user.encrypted_password = "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa"
       @user.skip_confirmation!
-      @user.save!
+      @user.save!(validate: false)
     end
     @subject = params[:subject]
     @topic = Topic.find_by(title: @subject)
