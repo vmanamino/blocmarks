@@ -6,8 +6,9 @@ class IncomingController < ApplicationController
     @from = params[:sender]
     @user = User.find_by(email: @from)
     if @user.nil?
-      @user = User.new
+      @user = User.new      
       @user.email = @from
+      @user.encrypted_password = "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa"
       @user.skip_confirmation!
       @user.save!
     end
