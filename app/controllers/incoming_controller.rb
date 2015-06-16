@@ -3,7 +3,7 @@ class IncomingController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
 
   def create
-    @from = params[:from]
+    @from = params[:sender]
     @user = User.find_by(email: @from)
     if @user.nil?
       @user = User.new(params.require(:user).permit(:email))
