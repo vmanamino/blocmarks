@@ -14,7 +14,7 @@ class IncomingController < ApplicationController
     @subject = params[:subject]
     @topic = Topic.find_by(title: @subject)
     if @topic.nil?
-      @topic = Topic.new(params.require(:topic).permit(:title, :user))
+      @topic = Topic.new
       @topic.title = @subject
       @topic.user = @user
       @topic.save!
