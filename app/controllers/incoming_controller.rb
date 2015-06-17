@@ -19,7 +19,7 @@ class IncomingController < ApplicationController
   end
 
   def create_topic
-    topic = Topic.new(title: params[:subject], user: user)
+    topic = Topic.new(title: params[:subject], user: params[:sender])
     topic.save!
   end
 end
