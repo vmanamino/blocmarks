@@ -5,9 +5,9 @@ class IncomingController < ApplicationController
   def create
     @user = User.find_by(email: params[:sender])
     create_user unless @user
-    topic = Topic.find_by(title: params[:subject])
-    create_topic unless topic
-    bookmark = Bookmark.new(url: params['body-plain'], topic: topic)
+    @topic = Topic.find_by(title: params[:subject])
+    create_topic unless @topic
+    bookmark = Bookmark.new(url: params['body-plain'], topic: @topic)
     bookmark.save!
     head 200
   end
@@ -19,7 +19,7 @@ class IncomingController < ApplicationController
   end
 
   def create_topic
-    topic = Topic.new(title: params[:subject], user: @user)
-    topic.save!
+    @topic = Topic.new(title: params[:subject], user: @user)
+    @topic.save!
   end
 end
