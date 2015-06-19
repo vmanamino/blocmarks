@@ -1,101 +1,101 @@
-2015-06-16T01:59:57.400645+00:00 heroku[web.1]: State changed from up to starting
-2015-06-16T02:00:01.186541+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2015-06-16T02:00:01.401129+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 26641 -e production`
-2015-06-16T02:00:02.073923+00:00 app[web.1]: [2015-06-16 02:00:02] FATAL SignalException: SIGTERM
-2015-06-16T02:00:02.073932+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:170:in `block in start'
-2015-06-16T02:00:02.073930+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:170:in `select'
-2015-06-16T02:00:02.073938+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/rack-1.6.1/lib/rack/server.rb:286:in `start'
-2015-06-16T02:00:02.073934+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:32:in `start'
-2015-06-16T02:00:02.073935+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:160:in `start'
-2015-06-16T02:00:02.073939+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/server.rb:80:in `start'
-2015-06-16T02:00:02.073936+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/rack-1.6.1/lib/rack/handler/webrick.rb:35:in `run'
-2015-06-16T02:00:02.073942+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:80:in `block in server'
-2015-06-16T02:00:02.073943+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:75:in `tap'
-2015-06-16T02:00:02.073945+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:75:in `server'
-2015-06-16T02:00:02.073946+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
-2015-06-16T02:00:02.073947+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands.rb:17:in `<top (required)>'
-2015-06-16T02:00:02.073951+00:00 app[web.1]: 	bin/rails:8:in `<main>'
-2015-06-16T02:00:02.073949+00:00 app[web.1]: 	bin/rails:8:in `require'
-2015-06-16T02:00:02.073958+00:00 app[web.1]: [2015-06-16 02:00:02] INFO  going to shutdown ...
-2015-06-16T02:00:02.073962+00:00 app[web.1]: [2015-06-16 02:00:02] INFO  WEBrick::HTTPServer#start done.
-2015-06-16T02:00:02.073991+00:00 app[web.1]: Exiting
-2015-06-16T02:00:03.504830+00:00 heroku[web.1]: Process exited with status 143
-2015-06-16T02:00:06.535804+00:00 app[web.1]: [2015-06-16 02:00:06] INFO  WEBrick 1.3.1
-2015-06-16T02:00:06.535837+00:00 app[web.1]: [2015-06-16 02:00:06] INFO  ruby 2.0.0 (2015-04-13) [x86_64-linux]
-2015-06-16T02:00:06.536166+00:00 app[web.1]: [2015-06-16 02:00:06] INFO  WEBrick::HTTPServer#start: pid=3 port=26641
-2015-06-16T02:00:07.268031+00:00 heroku[web.1]: State changed from starting to up
-2015-06-16T02:00:37.547419+00:00 app[web.1]: => Booting WEBrick
-2015-06-16T02:00:37.547423+00:00 app[web.1]: => Rails 4.2.1 application starting in production on http://0.0.0.0:26641
-2015-06-16T02:00:37.547425+00:00 app[web.1]: => Run `rails server -h` for more startup options
-2015-06-16T02:00:37.547426+00:00 app[web.1]: => Ctrl-C to shutdown server
-2015-06-16T02:00:37.667343+00:00 app[web.1]: Processing by IncomingController#create as */*
-2015-06-16T02:00:37.547428+00:00 app[web.1]: Started POST "/incoming" for 104.130.188.198 at 2015-06-16 02:00:37 +0000
-2015-06-16T02:00:37.737758+00:00 app[web.1]:   [1m[36mUser Load (3.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "vrlamin@hotmail.com"]]
-2015-06-16T02:00:37.673664+00:00 app[web.1]:   Parameters: {"recipient"=>"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org", "sender"=>"vrlamin@hotmail.com", "subject"=>"random", "from"=>"Viral Amin <vrlamin@hotmail.com>", "X-Mailgun-Incoming"=>"Yes", "X-Envelope-From"=>"<vrlamin@hotmail.com>", "Received"=>"from COL127-W52 ([65.55.34.71]) by COL004-OMC2S5.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);\t Mon, 15 Jun 2015 19:00:34 -0700", "X-Tmn"=>"[BT6wbsJla2sHWgxh0Kjyqfbu6BbD2BDM]", "X-Originating-Email"=>"[vrlamin@hotmail.com]", "Message-Id"=>"<COL127-W52240C26B24EB0777492ADACA70@phx.gbl>", "Return-Path"=>"vrlamin@hotmail.com", "Content-Type"=>"multipart/alternative; boundary=\"_56ed1bcc-32a7-487e-854e-97ffe5048139_\"", "From"=>"Viral Amin <vrlamin@hotmail.com>", "To"=>"\"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org\"\t<any@app010cb000286f4b51a7052764ec5b1754.mailgun.org>", "Subject"=>"random", "Date"=>"Mon, 15 Jun 2015 21:00:34 -0500", "Importance"=>"Normal", "Mime-Version"=>"1.0", "X-Originalarrivaltime"=>"16 Jun 2015 02:00:34.0697 (UTC) FILETIME=[3B832790:01D0A7D8]", "message-headers"=>"[[\"X-Mailgun-Incoming\", \"Yes\"], [\"X-Envelope-From\", \"<vrlamin@hotmail.com>\"], [\"Received\", \"from COL004-OMC2S5.hotmail.com (col004-omc2s5.hotmail.com [65.55.34.79]) by mxa.mailgun.org with ESMTP id 557f8343.7fe3400db9b0-in01; Tue, 16 Jun 2015 02:00:35 -0000 (UTC)\"], [\"Received\", \"from COL127-W52 ([65.55.34.71]) by COL004-OMC2S5.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);\\t Mon, 15 Jun 2015 19:00:34 -0700\"], [\"X-Tmn\", \"[BT6wbsJla2sHWgxh0Kjyqfbu6BbD2BDM]\"], [\"X-Originating-Email\", \"[vrlamin@hotmail.com]\"], [\"Message-Id\", \"<COL127-W52240C26B24EB0777492ADACA70@phx.gbl>\"], [\"Return-Path\", \"vrlamin@hotmail.com\"], [\"Content-Type\", \"multipart/alternative; boundary=\\\"_56ed1bcc-32a7-487e-854e-97ffe5048139_\\\"\"], [\"From\", \"Viral Amin <vrlamin@hotmail.com>\"], [\"To\", \"\\\"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org\\\"\\t<any@app010cb000286f4b51a7052764ec5b1754.mailgun.org>\"], [\"Subject\", \"random\"], [\"Date\", \"Mon, 15 Jun 2015 21:00:34 -0500\"], [\"Importance\", \"Normal\"], [\"Mime-Version\", \"1.0\"], [\"X-Originalarrivaltime\", \"16 Jun 2015 02:00:34.0697 (UTC) FILETIME=[3B832790:01D0A7D8]\"]]", "timestamp"=>"1434420037", "token"=>"6594791b35de1f68d79d20d66eb1d1b675ab3fdfb465a8b56f", "signature"=>"c02481f6fe3817558d3f51d6858711bdd26c333ac1fb55ef4f831d98309fc085", "body-plain"=>"https://github.com/vmanamino/blocmarks \t\t \t   \t\t  ", "body-html"=>"<html>\r\n<head>\r\n<style><!--\r\n.hmmessage P\r\n{\r\nmargin:0px;\r\npadding:0px\r\n}\r\nbody.hmmessage\r\n{\r\nfont-size: 12pt;\r\nfont-family:Calibri\r\n}\r\n--></style></head>\r\n<body class='hmmessage'><div dir='ltr'><a href=\"https://github.com/vmanamino/blocmarks\" target=\"_blank\">https://github.com/vmanamino/<wbr>blocmarks</a> \t\t \t   \t\t  </div></body>\r\n</html>", "stripped-html"=>"<html>\r\n<head>\r\n<style><!--\r\n.hmmessage P\r\n{\r\nmargin:0px;\r\npadding:0px\r\n}\r\nbody.hmmessage\r\n{\r\nfont-size: 12pt;\r\nfont-family:Calibri\r\n}\r\n--></style></head>\r\n<body class='hmmessage'><div dir='ltr'><a href=\"https://github.com/vmanamino/blocmarks\" target=\"_blank\">https://github.com/vmanamino/<wbr>blocmarks</a> \t\t \t   \t\t  </div></body>\r\n</html>", "stripped-text"=>"https://github.com/vmanamino/blocmarks", "stripped-signature"=>""}
-2015-06-16T02:00:38.445822+00:00 app[web.1]:   [1m[35m (6.0ms)[0m  BEGIN
-2015-06-16T02:00:38.501616+00:00 app[web.1]:   [1m[35m (2.9ms)[0m  ROLLBACK
-2015-06-16T02:00:38.506743+00:00 app[web.1]:
-2015-06-16T02:00:38.506750+00:00 app[web.1]:   app/controllers/incoming_controller.rb:13:in `create'
-2015-06-16T02:00:38.506747+00:00 app[web.1]: ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
-2015-06-16T02:00:38.506751+00:00 app[web.1]:
-2015-06-16T02:00:38.506752+00:00 app[web.1]:
-2015-06-16T02:00:38.514351+00:00 heroku[router]: at=info method=POST path="/incoming" host=viral-blocmarks.herokuapp.com request_id=109f89c3-2c49-41b1-a4e9-23440a40966e fwd="104.130.188.198" dyno=web.1 connect=0ms service=997ms status=422 bytes=1823
-2015-06-16T02:00:38.466276+00:00 app[web.1]:   [1m[36mUser Exists (4.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'vrlamin@hotmail.com' LIMIT 1[0m
-2015-06-16T02:00:38.502468+00:00 app[web.1]: Completed 422 Unprocessable Entity in 825ms (ActiveRecord: 37.1ms)
-2015-06-16T02:04:39.569970+00:00 heroku[api]: Deploy 2bb7c72 by vmanamino@gmail.com
-2015-06-16T02:04:39.569970+00:00 heroku[api]: Release v21 created by vmanamino@gmail.com
-2015-06-16T02:04:39.628792+00:00 heroku[slug-compiler]: Slug compilation started
-2015-06-16T02:04:39.628818+00:00 heroku[slug-compiler]: Slug compilation finished
-2015-06-16T02:04:40.915655+00:00 heroku[web.1]: State changed from up to starting
-2015-06-16T02:04:44.657305+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2015-06-16T02:04:45.509920+00:00 app[web.1]: [2015-06-16 02:04:45] FATAL SignalException: SIGTERM
-2015-06-16T02:04:45.509929+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:170:in `select'
-2015-06-16T02:04:45.509934+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:32:in `start'
-2015-06-16T02:04:45.509932+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:170:in `block in start'
-2015-06-16T02:04:45.509935+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:160:in `start'
-2015-06-16T02:04:45.509936+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/rack-1.6.1/lib/rack/handler/webrick.rb:35:in `run'
-2015-06-16T02:04:45.509938+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/rack-1.6.1/lib/rack/server.rb:286:in `start'
-2015-06-16T02:04:45.509939+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/server.rb:80:in `start'
-2015-06-16T02:04:45.509941+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:80:in `block in server'
-2015-06-16T02:04:45.509943+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:75:in `tap'
-2015-06-16T02:04:45.509944+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:75:in `server'
-2015-06-16T02:04:45.509946+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
-2015-06-16T02:04:45.509947+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.1/lib/rails/commands.rb:17:in `<top (required)>'
-2015-06-16T02:04:45.509951+00:00 app[web.1]: 	bin/rails:8:in `<main>'
-2015-06-16T02:04:45.510298+00:00 app[web.1]: [2015-06-16 02:04:45] INFO  WEBrick::HTTPServer#start done.
-2015-06-16T02:04:45.509949+00:00 app[web.1]: 	bin/rails:8:in `require'
-2015-06-16T02:04:45.510215+00:00 app[web.1]: [2015-06-16 02:04:45] INFO  going to shutdown ...
-2015-06-16T02:04:45.510384+00:00 app[web.1]: Exiting
-2015-06-16T02:04:45.546868+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 3524 -e production`
-2015-06-16T02:04:46.674019+00:00 heroku[web.1]: Process exited with status 143
-2015-06-16T02:04:54.060350+00:00 heroku[web.1]: State changed from starting to up
-2015-06-16T02:04:53.903602+00:00 app[web.1]: [2015-06-16 02:04:53] INFO  WEBrick 1.3.1
-2015-06-16T02:04:53.903632+00:00 app[web.1]: [2015-06-16 02:04:53] INFO  ruby 2.0.0 (2015-04-13) [x86_64-linux]
-2015-06-16T02:04:53.903939+00:00 app[web.1]: [2015-06-16 02:04:53] INFO  WEBrick::HTTPServer#start: pid=3 port=3524
-2015-06-16T02:05:19.014264+00:00 app[web.1]: => Booting WEBrick
-2015-06-16T02:05:19.014270+00:00 app[web.1]: => Rails 4.2.1 application starting in production on http://0.0.0.0:3524
-2015-06-16T02:05:19.014272+00:00 app[web.1]: => Run `rails server -h` for more startup options
-2015-06-16T02:05:19.014273+00:00 app[web.1]: => Ctrl-C to shutdown server
-2015-06-16T02:05:19.014274+00:00 app[web.1]: Started POST "/incoming" for 173.203.37.138 at 2015-06-16 02:05:19 +0000
-2015-06-16T02:05:19.064925+00:00 app[web.1]: Processing by IncomingController#create as */*
-2015-06-16T02:05:19.065104+00:00 app[web.1]:   Parameters: {"recipient"=>"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org", "sender"=>"vrlamin@hotmail.com", "subject"=>"random", "from"=>"Viral Amin <vrlamin@hotmail.com>", "X-Mailgun-Incoming"=>"Yes", "X-Envelope-From"=>"<vrlamin@hotmail.com>", "Received"=>"from COL127-W35 ([65.55.34.71]) by COL004-OMC2S6.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);\t Mon, 15 Jun 2015 19:05:14 -0700", "X-Tmn"=>"[PieCBiiYtp75w7hJUzYB0qT8PtS4Qnc9]", "X-Originating-Email"=>"[vrlamin@hotmail.com]", "Message-Id"=>"<COL127-W357CC4BAD550603B51F195ACA70@phx.gbl>", "Return-Path"=>"vrlamin@hotmail.com", "Content-Type"=>"multipart/alternative; boundary=\"_cf225f2b-5605-48b3-9ff2-ade49e53686a_\"", "From"=>"Viral Amin <vrlamin@hotmail.com>", "To"=>"\"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org\"\t<any@app010cb000286f4b51a7052764ec5b1754.mailgun.org>", "Subject"=>"random", "Date"=>"Mon, 15 Jun 2015 21:05:14 -0500", "Importance"=>"Normal", "Mime-Version"=>"1.0", "X-Originalarrivaltime"=>"16 Jun 2015 02:05:14.0891 (UTC) FILETIME=[E2855DB0:01D0A7D8]", "message-headers"=>"[[\"X-Mailgun-Incoming\", \"Yes\"], [\"X-Envelope-From\", \"<vrlamin@hotmail.com>\"], [\"Received\", \"from COL004-OMC2S6.hotmail.com (col004-omc2s6.hotmail.com [65.55.34.80]) by mxa.mailgun.org with ESMTP id 557f845b.7fceb41d79f0-in2; Tue, 16 Jun 2015 02:05:15 -0000 (UTC)\"], [\"Received\", \"from COL127-W35 ([65.55.34.71]) by COL004-OMC2S6.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);\\t Mon, 15 Jun 2015 19:05:14 -0700\"], [\"X-Tmn\", \"[PieCBiiYtp75w7hJUzYB0qT8PtS4Qnc9]\"], [\"X-Originating-Email\", \"[vrlamin@hotmail.com]\"], [\"Message-Id\", \"<COL127-W357CC4BAD550603B51F195ACA70@phx.gbl>\"], [\"Return-Path\", \"vrlamin@hotmail.com\"], [\"Content-Type\", \"multipart/alternative; boundary=\\\"_cf225f2b-5605-48b3-9ff2-ade49e53686a_\\\"\"], [\"From\", \"Viral Amin <vrlamin@hotmail.com>\"], [\"To\", \"\\\"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org\\\"\\t<any@app010cb000286f4b51a7052764ec5b1754.mailgun.org>\"], [\"Subject\", \"random\"], [\"Date\", \"Mon, 15 Jun 2015 21:05:14 -0500\"], [\"Importance\", \"Normal\"], [\"Mime-Version\", \"1.0\"], [\"X-Originalarrivaltime\", \"16 Jun 2015 02:05:14.0891 (UTC) FILETIME=[E2855DB0:01D0A7D8]\"]]", "timestamp"=>"1434420318", "token"=>"5eaa7206d71c0cea9364643290e86674054198bc040f21a11f", "signature"=>"742d3e3bb19e89c90658dad60363a62d72510d5cf8192cabf06bed9b5041069f", "body-plain"=>"https://github.com/vmanamino/blocmarks \t\t \t   \t\t  ", "body-html"=>"<html>\r\n<head>\r\n<style><!--\r\n.hmmessage P\r\n{\r\nmargin:0px;\r\npadding:0px\r\n}\r\nbody.hmmessage\r\n{\r\nfont-size: 12pt;\r\nfont-family:Calibri\r\n}\r\n--></style></head>\r\n<body class='hmmessage'><div dir='ltr'><a href=\"https://github.com/vmanamino/blocmarks\" target=\"_blank\">https://github.com/vmanamino/<wbr>blocmarks</a> \t\t \t   \t\t  </div></body>\r\n</html>", "stripped-html"=>"<html>\r\n<head>\r\n<style><!--\r\n.hmmessage P\r\n{\r\nmargin:0px;\r\npadding:0px\r\n}\r\nbody.hmmessage\r\n{\r\nfont-size: 12pt;\r\nfont-family:Calibri\r\n}\r\n--></style></head>\r\n<body class='hmmessage'><div dir='ltr'><a href=\"https://github.com/vmanamino/blocmarks\" target=\"_blank\">https://github.com/vmanamino/<wbr>blocmarks</a> \t\t \t   \t\t  </div></body>\r\n</html>", "stripped-text"=>"https://github.com/vmanamino/blocmarks", "stripped-signature"=>""}
-2015-06-16T02:05:19.086275+00:00 app[web.1]:   [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "vrlamin@hotmail.com"]]
-2015-06-16T02:05:19.167449+00:00 app[web.1]:   [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "vrlamin@hotmail.com"], ["encrypted_password", "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa"], ["confirmed_at", "2015-06-16 02:05:19.162433"], ["created_at", "2015-06-16 02:05:19.164124"], ["updated_at", "2015-06-16 02:05:19.164124"]]
-2015-06-16T02:05:19.175864+00:00 app[web.1]:   [1m[36mTopic Load (1.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."title" = $1 LIMIT 1[0m  [["title", "random"]]
-2015-06-16T02:05:19.239297+00:00 app[web.1]:   [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "https://github.com/vmanamino/blocmarks \t\t \t   \t\t  "], ["topic_id", 1], ["created_at", "2015-06-16 02:05:19.230909"], ["updated_at", "2015-06-16 02:05:19.230909"]]
-2015-06-16T02:05:19.242677+00:00 app[web.1]: Completed 200 OK in 177ms (ActiveRecord: 38.6ms)
-2015-06-16T02:05:19.163916+00:00 app[web.1]:   [1m[35m (1.0ms)[0m  BEGIN
-2015-06-16T02:05:19.170503+00:00 app[web.1]:   [1m[35m (1.7ms)[0m  COMMIT
-2015-06-16T02:05:19.230377+00:00 app[web.1]:   [1m[35m (5.1ms)[0m  BEGIN
-2015-06-16T02:05:19.241953+00:00 app[web.1]:   [1m[35m (1.9ms)[0m  COMMIT
-2015-06-16T02:05:19.245999+00:00 heroku[router]: at=info method=POST path="/incoming" host=viral-blocmarks.herokuapp.com request_id=932cab99-62a9-4e78-973b-fe17048bd987 fwd="173.203.37.138" dyno=web.1 connect=1ms service=239ms status=200 bytes=401
-2015-06-16T02:07:08.131922+00:00 heroku[router]: at=info method=POST path="/incoming" host=viral-blocmarks.herokuapp.com request_id=45a3e68f-ffe6-4555-b45e-23554ff71e03 fwd="173.203.37.38" dyno=web.1 connect=2ms service=55ms status=200 bytes=401
-2015-06-16T02:07:08.081798+00:00 app[web.1]: Started POST "/incoming" for 173.203.37.38 at 2015-06-16 02:07:08 +0000
-2015-06-16T02:07:08.093533+00:00 app[web.1]:   Parameters: {"recipient"=>"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org", "sender"=>"vrlamin@hotmail.com", "subject"=>"random", "from"=>"Viral Amin <vrlamin@hotmail.com>", "X-Mailgun-Incoming"=>"Yes", "X-Envelope-From"=>"<vrlamin@hotmail.com>", "Received"=>"from COL127-W39 ([65.55.34.72]) by COL004-OMC2S10.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);\t Mon, 15 Jun 2015 18:41:53 -0700", "X-Tmn"=>"[V+t4dDKEexFKnD7ntgg3s9rhI6H6bvfY]", "X-Originating-Email"=>"[vrlamin@hotmail.com]", "Message-Id"=>"<COL127-W398A52FE98421DD2ED1124ACA70@phx.gbl>", "Return-Path"=>"vrlamin@hotmail.com", "Content-Type"=>"multipart/alternative; boundary=\"_aff01a1c-0366-4d29-b5ab-c5437b6f7803_\"", "From"=>"Viral Amin <vrlamin@hotmail.com>", "To"=>"\"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org\"\t<any@app010cb000286f4b51a7052764ec5b1754.mailgun.org>", "Subject"=>"random", "Date"=>"Mon, 15 Jun 2015 20:41:53 -0500", "Importance"=>"Normal", "Mime-Version"=>"1.0", "X-Originalarrivaltime"=>"16 Jun 2015 01:41:53.0835 (UTC) FILETIME=[9F6D2FB0:01D0A7D5]", "message-headers"=>"[[\"X-Mailgun-Incoming\", \"Yes\"], [\"X-Envelope-From\", \"<vrlamin@hotmail.com>\"], [\"Received\", \"from COL004-OMC2S10.hotmail.com (col004-omc2s10.hotmail.com [65.55.34.84]) by mxa.mailgun.org with ESMTP id 557f7ee2.7fefe4736570-in1; Tue, 16 Jun 2015 01:41:54 -0000 (UTC)\"], [\"Received\", \"from COL127-W39 ([65.55.34.72]) by COL004-OMC2S10.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);\\t Mon, 15 Jun 2015 18:41:53 -0700\"], [\"X-Tmn\", \"[V+t4dDKEexFKnD7ntgg3s9rhI6H6bvfY]\"], [\"X-Originating-Email\", \"[vrlamin@hotmail.com]\"], [\"Message-Id\", \"<COL127-W398A52FE98421DD2ED1124ACA70@phx.gbl>\"], [\"Return-Path\", \"vrlamin@hotmail.com\"], [\"Content-Type\", \"multipart/alternative; boundary=\\\"_aff01a1c-0366-4d29-b5ab-c5437b6f7803_\\\"\"], [\"From\", \"Viral Amin <vrlamin@hotmail.com>\"], [\"To\", \"\\\"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org\\\"\\t<any@app010cb000286f4b51a7052764ec5b1754.mailgun.org>\"], [\"Subject\", \"random\"], [\"Date\", \"Mon, 15 Jun 2015 20:41:53 -0500\"], [\"Importance\", \"Normal\"], [\"Mime-Version\", \"1.0\"], [\"X-Originalarrivaltime\", \"16 Jun 2015 01:41:53.0835 (UTC) FILETIME=[9F6D2FB0:01D0A7D5]\"]]", "timestamp"=>"1434420427", "token"=>"d5274aacbb2ae9d36571fe61876c5b2c04d058516b3f93687b", "signature"=>"89b4038b0d1f588a402af5e3f0e0179c14d1e40c2acd60ad877922720500d4fc", "body-plain"=>"https://github.com/vmanamino/blocmarks \t\t \t   \t\t  ", "body-html"=>"<html>\r\n<head>\r\n<style><!--\r\n.hmmessage P\r\n{\r\nmargin:0px;\r\npadding:0px\r\n}\r\nbody.hmmessage\r\n{\r\nfont-size: 12pt;\r\nfont-family:Calibri\r\n}\r\n--></style></head>\r\n<body class='hmmessage'><div dir='ltr'><a href=\"https://github.com/vmanamino/blocmarks\" target=\"_blank\">https://github.com/vmanamino/<wbr>blocmarks</a> \t\t \t   \t\t  </div></body>\r\n</html>", "stripped-html"=>"<html>\r\n<head>\r\n<style><!--\r\n.hmmessage P\r\n{\r\nmargin:0px;\r\npadding:0px\r\n}\r\nbody.hmmessage\r\n{\r\nfont-size: 12pt;\r\nfont-family:Calibri\r\n}\r\n--></style></head>\r\n<body class='hmmessage'><div dir='ltr'><a href=\"https://github.com/vmanamino/blocmarks\" target=\"_blank\">https://github.com/vmanamino/<wbr>blocmarks</a> \t\t \t   \t\t  </div></body>\r\n</html>", "stripped-text"=>"https://github.com/vmanamino/blocmarks", "stripped-signature"=>""}
-2015-06-16T02:07:08.108523+00:00 app[web.1]:   [1m[35mTopic Load (7.6ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."title" = $1 LIMIT 1  [["title", "random"]]
-2015-06-16T02:07:08.122417+00:00 app[web.1]:   [1m[35mSQL (6.0ms)[0m  INSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url", "https://github.com/vmanamino/blocmarks \t\t \t   \t\t  "], ["topic_id", 1], ["created_at", "2015-06-16 02:07:08.115286"], ["updated_at", "2015-06-16 02:07:08.115286"]]
-2015-06-16T02:07:08.127983+00:00 app[web.1]: Completed 200 OK in 34ms (ActiveRecord: 23.7ms)
-2015-06-16T02:07:08.091444+00:00 app[web.1]: Processing by IncomingController#create as */*
-2015-06-16T02:07:08.099785+00:00 app[web.1]:   [1m[36mUser Load (4.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "vrlamin@hotmail.com"]]
-2015-06-16T02:07:08.111532+00:00 app[web.1]:   [1m[36m (1.9ms)[0m  [1mBEGIN[0m
-2015-06-16T02:07:08.127522+00:00 app[web.1]:   [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+2015-06-19T02:59:06.968313+00:00 heroku[router]: at=info method=GET path="/topics" host=viral-blocmarks.herokuapp.com request_id=eaa537af-93cf-45ff-ad33-daaf2df21e3d fwd="71.163.107.55" dyno=web.1 connect=1ms service=14ms status=200 bytes=1954
+2015-06-19T02:59:07.026690+00:00 heroku[router]: at=info method=GET path="/assets/application-4e6d97a09b9624c8f26fba1d1435263628b98a7a010cbd1ca719e5430b150817.js" host=viral-blocmarks.herokuapp.com request_id=22a781da-9d4e-47da-a229-c469b9454248 fwd="71.163.107.55" dyno=web.1 connect=0ms service=3ms status=304 bytes=133
+2015-06-19T02:59:06.961457+00:00 app[web.1]: Started GET "/topics" for 71.163.107.55 at 2015-06-19 02:59:06 +0000
+2015-06-19T02:59:06.966887+00:00 app[web.1]:   [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+2015-06-19T02:59:06.969953+00:00 app[web.1]:   Rendered topics/index.html.erb within layouts/application (1.8ms)
+2015-06-19T02:59:06.963845+00:00 app[web.1]: Processing by TopicsController#index as HTML
+2015-06-19T02:59:06.969787+00:00 app[web.1]:   [1m[36mTopic Load (1.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+2015-06-19T02:59:06.971325+00:00 app[web.1]: Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 2.6ms)
+2015-06-19T02:59:10.987887+00:00 heroku[router]: at=info method=GET path="/topics" host=viral-blocmarks.herokuapp.com request_id=becb7319-6d31-403b-aa04-fc33bdf1e08a fwd="71.163.107.55" dyno=web.1 connect=0ms service=22ms status=200 bytes=1954
+2015-06-19T02:59:11.052689+00:00 heroku[router]: at=info method=GET path="/assets/application-4e6d97a09b9624c8f26fba1d1435263628b98a7a010cbd1ca719e5430b150817.js" host=viral-blocmarks.herokuapp.com request_id=db196434-4783-45a9-b3bb-84826c3d93cb fwd="71.163.107.55" dyno=web.1 connect=1ms service=5ms status=304 bytes=133
+2015-06-19T02:59:10.971375+00:00 app[web.1]: Started GET "/topics" for 71.163.107.55 at 2015-06-19 02:59:10 +0000
+2015-06-19T02:59:10.980569+00:00 app[web.1]:   [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+2015-06-19T02:59:10.983294+00:00 app[web.1]:   Rendered topics/index.html.erb within layouts/application (1.7ms)
+2015-06-19T02:59:10.978011+00:00 app[web.1]: Processing by TopicsController#index as HTML
+2015-06-19T02:59:10.983128+00:00 app[web.1]:   [1m[36mTopic Load (1.1ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+2015-06-19T02:59:10.984362+00:00 app[web.1]: Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 2.2ms)
+2015-06-19T02:59:11.060125+00:00 heroku[router]: at=info method=GET path="/assets/application-bd4b65c7122aac53c48b1d267073f10244cb02cb13520d97a65b6c37ec48426e.css" host=viral-blocmarks.herokuapp.com request_id=ab5cd15a-c537-48a8-8e33-9a59389e87d2 fwd="71.163.107.55" dyno=web.1 connect=0ms service=7ms status=304 bytes=133
+2015-06-19T02:59:12.557722+00:00 heroku[router]: at=info method=GET path="/assets/application-4e6d97a09b9624c8f26fba1d1435263628b98a7a010cbd1ca719e5430b150817.js" host=viral-blocmarks.herokuapp.com request_id=71468739-f788-4210-b81c-e44faddbc926 fwd="71.163.107.55" dyno=web.1 connect=0ms service=3ms status=304 bytes=133
+2015-06-19T02:59:12.574604+00:00 heroku[router]: at=info method=GET path="/assets/application-bd4b65c7122aac53c48b1d267073f10244cb02cb13520d97a65b6c37ec48426e.css" host=viral-blocmarks.herokuapp.com request_id=c3005aa7-a587-4510-af86-c99c2ad9df60 fwd="71.163.107.55" dyno=web.1 connect=1ms service=14ms status=304 bytes=133
+2015-06-19T02:59:12.497999+00:00 heroku[router]: at=info method=GET path="/topics" host=viral-blocmarks.herokuapp.com request_id=6725efb5-213f-411a-a186-56ad284398dd fwd="71.163.107.55" dyno=web.1 connect=1ms service=18ms status=200 bytes=1954
+2015-06-19T02:59:12.488469+00:00 app[web.1]: Started GET "/topics" for 71.163.107.55 at 2015-06-19 02:59:12 +0000
+2015-06-19T02:59:12.497051+00:00 app[web.1]:   [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+2015-06-19T02:59:12.500155+00:00 app[web.1]:   Rendered topics/index.html.erb within layouts/application (1.7ms)
+2015-06-19T02:59:12.490758+00:00 app[web.1]: Processing by TopicsController#index as HTML
+2015-06-19T02:59:12.499857+00:00 app[web.1]:   [1m[36mTopic Load (1.1ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+2015-06-19T02:59:12.501202+00:00 app[web.1]: Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 2.1ms)
+2015-06-19T02:59:19.042024+00:00 heroku[router]: at=info method=GET path="/" host=viral-blocmarks.herokuapp.com request_id=bd8526a7-86ee-4389-9821-6f3413dd5ee1 fwd="71.163.107.55" dyno=web.1 connect=2ms service=11ms status=200 bytes=2709
+2015-06-19T02:59:19.038811+00:00 app[web.1]: Started GET "/" for 71.163.107.55 at 2015-06-19 02:59:19 +0000
+2015-06-19T02:59:19.042380+00:00 app[web.1]:   Rendered welcome/index.html.erb within layouts/application (0.3ms)
+2015-06-19T02:59:19.045857+00:00 app[web.1]: Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.1ms)
+2015-06-19T02:59:19.044926+00:00 app[web.1]:   [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+2015-06-19T02:59:19.041046+00:00 app[web.1]: Processing by WelcomeController#index as HTML
+2015-06-19T02:59:25.705221+00:00 heroku[router]: at=info method=GET path="/topics" host=viral-blocmarks.herokuapp.com request_id=417b7893-e402-40dd-a640-2e8ad3628bbd fwd="71.163.107.55" dyno=web.1 connect=2ms service=13ms status=200 bytes=1954
+2015-06-19T02:59:25.707879+00:00 app[web.1]:   Rendered topics/index.html.erb within layouts/application (1.7ms)
+2015-06-19T02:59:25.700254+00:00 app[web.1]: Started GET "/topics" for 71.163.107.55 at 2015-06-19 02:59:25 +0000
+2015-06-19T02:59:25.702528+00:00 app[web.1]: Processing by TopicsController#index as HTML
+2015-06-19T02:59:25.707681+00:00 app[web.1]:   [1m[35mTopic Load (1.1ms)[0m  SELECT "topics".* FROM "topics"
+2015-06-19T02:59:25.705059+00:00 app[web.1]:   [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+2015-06-19T02:59:25.708897+00:00 app[web.1]: Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 2.1ms)
+2015-06-19T02:59:38.898985+00:00 heroku[api]: Starting process with command `rails c` by vmanamino@gmail.com
+2015-06-19T02:59:43.982531+00:00 heroku[run.9671]: Awaiting client
+2015-06-19T02:59:44.039529+00:00 heroku[run.9671]: Starting process with command `rails c`
+2015-06-19T02:59:44.140509+00:00 heroku[run.9671]: State changed from starting to up
+2015-06-19T03:00:08.241791+00:00 heroku[run.9671]: Process exited with status 0
+2015-06-19T03:00:08.268449+00:00 heroku[run.9671]: State changed from up to complete
+2015-06-19T03:01:44.830806+00:00 heroku[router]: at=info method=POST path="/incoming" host=viral-blocmarks.herokuapp.com request_id=652f55a8-0381-4a96-b552-c3474c588900 fwd="173.203.37.38" dyno=web.1 connect=0ms service=13ms status=302 bytes=994
+2015-06-19T03:01:44.826003+00:00 app[web.1]: Started POST "/incoming" for 173.203.37.38 at 2015-06-19 03:01:44 +0000
+2015-06-19T03:01:44.831698+00:00 app[web.1]:   [1m[35mTopic Load (1.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."title" = $1 LIMIT 1  [["title", "German radio"]]
+2015-06-19T03:01:44.828333+00:00 app[web.1]:   Parameters: {"recipient"=>"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org", "sender"=>"vmanamino@gmail.com", "subject"=>"German radio", "from"=>"Viral Amin <vmanamino@gmail.com>", "X-Mailgun-Incoming"=>"Yes", "X-Envelope-From"=>"<vmanamino@gmail.com>", "Received"=>"by 10.202.49.75 with HTTP; Thu, 18 Jun 2015 20:01:41 -0700 (PDT)", "Dkim-Signature"=>"v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com; s=20120113;        h=mime-version:date:message-id:subject:from:to:content-type;        bh=i6UsaDX9t2arJbr2u3/2sB1b+OdyoQiF5M8Z8IIUSZo=;        b=LiZFjD9jzr1DyJ6uNktN38Ct23SWsz0CEdBO0qAIhPYwNlYANqCVRkxZGbwzTB48ZE         qhMBLfbWC8mC5nDrTvVkc+ZNWBdYnj8SY9Y2w1f2RyEblr0UNCo9EvP1LnEi3AxtM2WK         vcq5yzcQCa+3UUuFlVYM0zQKOxAzC4wZ0TVDRAa0A7Ck4SdGodTm4UXMGEw/+WBbbZ7o         BpHbHF3JSDLDY57IQhgZQa+vlQ3eoDDu0hMBO0Tlhl3DxEl9uHeCVISAsNLe5VBvL2LB         F6z2TUfhwcXZu2FbWBP/cfOvDyUDcOaehq1jqbcKxP3jwKu4jJIuRm8cJe8G7xNu9M38         D3Eg==", "Mime-Version"=>"1.0", "X-Received"=>"by 10.60.47.165 with SMTP id e5mr11540898oen.52.1434682902059; Thu, 18 Jun 2015 20:01:42 -0700 (PDT)", "Date"=>"Thu, 18 Jun 2015 23:01:41 -0400", "Message-Id"=>"<CAPrB=xnD-nhm1dUEsyLJU=PjuSYBZXQnBQ8r4AbM6Vma3ygLPA@mail.gmail.com>", "Subject"=>"German radio", "From"=>"Viral Amin <vmanamino@gmail.com>", "To"=>"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org", "Content-Type"=>"multipart/alternative; boundary=\"001a11c2cec2be21cd0518d624fb\"", "message-headers"=>"[[\"X-Mailgun-Incoming\", \"Yes\"], [\"X-Envelope-From\", \"<vmanamino@gmail.com>\"], [\"Received\", \"from mail-oi0-f43.google.com (mail-oi0-f43.google.com [209.85.218.43]) by mxa.mailgun.org with ESMTP id 55838616.7fe7a3c616b0-in3; Fri, 19 Jun 2015 03:01:42 -0000 (UTC)\"], [\"Received\", \"by oiax193 with SMTP id x193so71322587oia.2        for <any@app010cb000286f4b51a7052764ec5b1754.mailgun.org>; Thu, 18 Jun 2015 20:01:42 -0700 (PDT)\"], [\"Dkim-Signature\", \"v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com; s=20120113;        h=mime-version:date:message-id:subject:from:to:content-type;        bh=i6UsaDX9t2arJbr2u3/2sB1b+OdyoQiF5M8Z8IIUSZo=;        b=LiZFjD9jzr1DyJ6uNktN38Ct23SWsz0CEdBO0qAIhPYwNlYANqCVRkxZGbwzTB48ZE         qhMBLfbWC8mC5nDrTvVkc+ZNWBdYnj8SY9Y2w1f2RyEblr0UNCo9EvP1LnEi3AxtM2WK         vcq5yzcQCa+3UUuFlVYM0zQKOxAzC4wZ0TVDRAa0A7Ck4SdGodTm4UXMGEw/+WBbbZ7o         BpHbHF3JSDLDY57IQhgZQa+vlQ3eoDDu0hMBO0Tlhl3DxEl9uHeCVISAsNLe5VBvL2LB         F6z2TUfhwcXZu2FbWBP/cfOvDyUDcOaehq1jqbcKxP3jwKu4jJIuRm8cJe8G7xNu9M38         D3Eg==\"], [\"Mime-Version\", \"1.0\"], [\"X-Received\", \"by 10.60.47.165 with SMTP id e5mr11540898oen.52.1434682902059; Thu, 18 Jun 2015 20:01:42 -0700 (PDT)\"], [\"Received\", \"by 10.202.49.75 with HTTP; Thu, 18 Jun 2015 20:01:41 -0700 (PDT)\"], [\"Date\", \"Thu, 18 Jun 2015 23:01:41 -0400\"], [\"Message-Id\", \"<CAPrB=xnD-nhm1dUEsyLJU=PjuSYBZXQnBQ8r4AbM6Vma3ygLPA@mail.gmail.com>\"], [\"Subject\", \"German radio\"], [\"From\", \"Viral Amin <vmanamino@gmail.com>\"], [\"To\", \"any@app010cb000286f4b51a7052764ec5b1754.mailgun.org\"], [\"Content-Type\", \"multipart/alternative; boundary=\\\"001a11c2cec2be21cd0518d624fb\\\"\"]]", "timestamp"=>"1434682904", "token"=>"4e353e2b6c4a3b8bd984c19133ba48f2cc719ccd9f16753f29", "signature"=>"42973c3615f18de0b420c9b07fbf0026e31c2ecdd175706e807512d9cf66f6bb", "body-plain"=>"http://www.deutschlandfunk.de/\r\n", "body-html"=>"<div dir=\"ltr\"><a href=\"http://www.deutschlandfunk.de/\">http://www.deutschlandfunk.de/</a><br></div>\r\n", "stripped-html"=>"<div dir=\"ltr\"><a href=\"http://www.deutschlandfunk.de/\">http://www.deutschlandfunk.de/</a><br></div>\r\n", "stripped-text"=>"http://www.deutschlandfunk.de/", "stripped-signature"=>""}
+2015-06-19T03:01:44.828179+00:00 app[web.1]: Processing by IncomingController#create as */*
+2015-06-19T03:01:44.830212+00:00 app[web.1]:   [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "vmanamino@gmail.com"]]
+2015-06-19T03:01:44.832893+00:00 app[web.1]: Redirected to https://viral-blocmarks.herokuapp.com/
+2015-06-19T03:01:44.833021+00:00 app[web.1]: Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+2015-06-19T03:02:38.807539+00:00 heroku[router]: at=info method=GET path="/topics" host=viral-blocmarks.herokuapp.com request_id=24f3cd70-9233-43fe-a666-abb1323b31d5 fwd="71.163.107.55" dyno=web.1 connect=0ms service=17ms status=200 bytes=1954
+2015-06-19T03:02:38.939759+00:00 heroku[router]: at=info method=GET path="/assets/application-4e6d97a09b9624c8f26fba1d1435263628b98a7a010cbd1ca719e5430b150817.js" host=viral-blocmarks.herokuapp.com request_id=cabb8f5e-215e-4376-bed2-c4991a94a0a3 fwd="71.163.107.55" dyno=web.1 connect=0ms service=4ms status=304 bytes=133
+2015-06-19T03:02:38.868082+00:00 heroku[router]: at=info method=GET path="/assets/application-bd4b65c7122aac53c48b1d267073f10244cb02cb13520d97a65b6c37ec48426e.css" host=viral-blocmarks.herokuapp.com request_id=d1e2310c-877b-4d33-a77e-c748591068e0 fwd="71.163.107.55" dyno=web.1 connect=1ms service=5ms status=304 bytes=133
+2015-06-19T03:02:38.801527+00:00 app[web.1]: Started GET "/topics" for 71.163.107.55 at 2015-06-19 03:02:38 +0000
+2015-06-19T03:02:38.806314+00:00 app[web.1]:   [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+2015-06-19T03:02:38.809567+00:00 app[web.1]:   Rendered topics/index.html.erb within layouts/application (2.0ms)
+2015-06-19T03:02:38.803744+00:00 app[web.1]: Processing by TopicsController#index as HTML
+2015-06-19T03:02:38.809182+00:00 app[web.1]:   [1m[35mTopic Load (1.1ms)[0m  SELECT "topics".* FROM "topics"
+2015-06-19T03:02:38.810659+00:00 app[web.1]: Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 2.3ms)
+2015-06-19T03:02:46.009016+00:00 heroku[router]: at=info method=GET path="/" host=viral-blocmarks.herokuapp.com request_id=bb8fc296-1715-49d6-8226-6c9592aa9620 fwd="71.163.107.55" dyno=web.1 connect=0ms service=13ms status=200 bytes=2709
+2015-06-19T03:02:46.005283+00:00 app[web.1]: Started GET "/" for 71.163.107.55 at 2015-06-19 03:02:46 +0000
+2015-06-19T03:02:46.009114+00:00 app[web.1]:   Rendered welcome/index.html.erb within layouts/application (0.3ms)
+2015-06-19T03:02:46.012923+00:00 app[web.1]: Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.3ms)
+2015-06-19T03:02:46.007593+00:00 app[web.1]: Processing by WelcomeController#index as HTML
+2015-06-19T03:02:46.011952+00:00 app[web.1]:   [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+2015-06-19T03:02:51.609849+00:00 heroku[router]: at=info method=GET path="/topics" host=viral-blocmarks.herokuapp.com request_id=70cd8c29-8c3a-48f9-948b-b286a8dfcf22 fwd="71.163.107.55" dyno=web.1 connect=0ms service=107ms status=200 bytes=1954
+2015-06-19T03:02:51.516898+00:00 app[web.1]: Started GET "/topics" for 71.163.107.55 at 2015-06-19 03:02:51 +0000
+2015-06-19T03:02:51.558148+00:00 app[web.1]:   [1m[35mUser Load (34.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+2015-06-19T03:02:51.596792+00:00 app[web.1]:   Rendered topics/index.html.erb within layouts/application (30.1ms)
+2015-06-19T03:02:51.520941+00:00 app[web.1]: Processing by TopicsController#index as HTML
+2015-06-19T03:02:51.596426+00:00 app[web.1]:   [1m[36mTopic Load (3.8ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+2015-06-19T03:02:51.598611+00:00 app[web.1]: Completed 200 OK in 77ms (Views: 35.1ms | ActiveRecord: 38.5ms)
+2015-06-19T03:02:56.520630+00:00 heroku[router]: at=info method=POST path="/users/sign_out" host=viral-blocmarks.herokuapp.com request_id=f6761936-d448-486e-978e-b1a32646a70b fwd="71.163.107.55" dyno=web.1 connect=8ms service=28ms status=302 bytes=934
+2015-06-19T03:02:56.501279+00:00 app[web.1]: Started DELETE "/users/sign_out" for 71.163.107.55 at 2015-06-19 03:02:56 +0000
+2015-06-19T03:02:56.512077+00:00 app[web.1]:   [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+2015-06-19T03:02:56.516091+00:00 app[web.1]: Redirected to https://viral-blocmarks.herokuapp.com/
+2015-06-19T03:02:56.627180+00:00 app[web.1]:   Rendered welcome/index.html.erb within layouts/application (0.7ms)
+2015-06-19T03:02:56.621773+00:00 app[web.1]: Started GET "/" for 71.163.107.55 at 2015-06-19 03:02:56 +0000
+2015-06-19T03:02:56.504222+00:00 app[web.1]: Processing by Devise::SessionsController#destroy as HTML
+2015-06-19T03:02:56.504259+00:00 app[web.1]:   Parameters: {"authenticity_token"=>"UC6TK+rmTo6K7yeym5XTZVj07UDh78uiIHkbgIp4tbWMx4jjAGFcBXNya7QGoCBw9hnEd6JbGAMHcntx36h0vg=="}
+2015-06-19T03:02:56.514686+00:00 app[web.1]:   [1m[35m (1.0ms)[0m  COMMIT
+2015-06-19T03:02:56.624726+00:00 app[web.1]: Processing by WelcomeController#index as HTML
+2015-06-19T03:02:56.507358+00:00 app[web.1]:   [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+2015-06-19T03:02:56.516299+00:00 app[web.1]: Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+2015-06-19T03:02:56.629454+00:00 app[web.1]: Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+2015-06-19T03:02:56.632320+00:00 heroku[router]: at=info method=GET path="/" host=viral-blocmarks.herokuapp.com request_id=93cdf618-2923-424a-8554-e8e9939b2e8c fwd="71.163.107.55" dyno=web.1 connect=27ms service=20ms status=200 bytes=2972
+2015-06-19T03:03:00.656775+00:00 heroku[router]: at=info method=GET path="/topics" host=viral-blocmarks.herokuapp.com request_id=9ec56a27-7018-4540-98b1-4e5458691717 fwd="71.163.107.55" dyno=web.1 connect=8ms service=41ms status=200 bytes=1767
+2015-06-19T03:03:00.646732+00:00 app[web.1]:   Rendered topics/index.html.erb within layouts/application (2.3ms)
+2015-06-19T03:03:00.642197+00:00 app[web.1]: Processing by TopicsController#index as HTML
+2015-06-19T03:03:00.633330+00:00 app[web.1]: Started GET "/topics" for 71.163.107.55 at 2015-06-19 03:03:00 +0000
+2015-06-19T03:03:00.646334+00:00 app[web.1]:   [1m[36mTopic Load (1.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+2015-06-19T03:03:00.648269+00:00 app[web.1]: Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.3ms)
+2015-06-19T03:03:09.070970+00:00 heroku[api]: Starting process with command `rails c` by vmanamino@gmail.com
+2015-06-19T03:03:14.552886+00:00 heroku[run.5888]: Awaiting client
+2015-06-19T03:03:14.596760+00:00 heroku[run.5888]: Starting process with command `rails c`
+2015-06-19T03:03:14.777329+00:00 heroku[run.5888]: State changed from starting to up
+2015-06-19T03:03:41.689984+00:00 heroku[run.5888]: State changed from up to complete
+2015-06-19T03:03:41.653933+00:00 heroku[run.5888]: Process exited with status 0
