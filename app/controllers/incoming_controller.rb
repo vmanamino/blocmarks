@@ -20,6 +20,7 @@ class IncomingController < ApplicationController
 
   def create_topic
     @topic = Topic.new(title: params[:subject], user: @user)
+    authorize @topic
     @topic.save!
   end
 end
