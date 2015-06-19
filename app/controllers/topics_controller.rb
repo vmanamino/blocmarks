@@ -1,11 +1,11 @@
 class TopicsController < ApplicationController
   def index
     @topics = Topic.all
-    authorize @topics    
+    authorize @topics
   end
 
   def show
-    @topic = Topic.find(params[:id])    
+    @topic = Topic.find(params[:id])
     @bookmarks = @topic.bookmarks
   end
 
@@ -13,10 +13,10 @@ class TopicsController < ApplicationController
     @topic = Topic.new
     authorize @topic
   end
-  
+
   def create
-    @topic = current_user.topics.build(params.require(:topic).permit(:title))   
-    authorize @topic   
+    @topic = current_user.topics.build(params.require(:topic).permit(:title))
+    authorize @topic
     if @topic.save
       redirect_to @topic, notice: 'Topic was saved successfully.'
     else
@@ -29,7 +29,7 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
     authorize @topic
   end
-  
+
   def update
     @topic = Topic.find(params[:id])
     authorize @topic
@@ -41,15 +41,15 @@ class TopicsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @topic = Topic.find(params[:id])
     authorize @topic
     if @topic.destroy
-      flash[:notice] = "Topic was deleted successfully"
+      flash[:notice] = 'Topic was deleted successfully'
       redirect_to topics_path
     else
-      flash[:error] = "There was an error deleting the topic"
+      flash[:error] = 'There was an error deleting the topic'
       render :index
     end
   end
