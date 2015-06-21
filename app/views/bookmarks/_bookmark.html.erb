@@ -3,8 +3,11 @@
   <div style="position: :relative">
     <% topic.bookmarks.each do |b| %>
     <div class="col-md-7"><%= link_to b.url, "#{b.url}" %></div>
+    <% if policy(b).edit? %>
+    <div class="col-md-8"><%= link_to "Edit Bookmark", edit_topic_bookmark_path(topic, b), class: 'btn btn-success' %></div>
+    <% end %>
     <% if policy(b).destroy? %>
-    <%= link_to "Delete Bookmark", [b], method: :delete, class: 'btn btn-danger' %>
+    <div class="col-md-8"><%= link_to "Delete Bookmark", [topic, b], method: :delete, class: 'btn btn-danger' %></div>
     <% end %>
     <% end %>
   </div>

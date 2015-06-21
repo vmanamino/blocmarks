@@ -1,6 +1,6 @@
 class BookmarkPolicy < ApplicationPolicy
   def update?
-    user.present? && (record.topic == user.topic || user.admin?)
+    user.present? && (record.user == user || user.admin?)
   end
   
   def edit?

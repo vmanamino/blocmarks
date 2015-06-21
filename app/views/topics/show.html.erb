@@ -4,7 +4,7 @@
 <% end %>
 <%= render partial: 'bookmarks/bookmark', locals: {topic: @topic} %> 
 <% if policy(Bookmark.new).create? %>
-  <%= render partial: 'bookmarks/form', locals: {topic: @topic} %>
+<%= link_to "New Bookmark", new_topic_bookmark_path(@topic), class: 'btn btn-success' %>
 <% end %>
 
 
