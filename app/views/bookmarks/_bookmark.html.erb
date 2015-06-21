@@ -3,6 +3,9 @@
   <div style="position: :relative">
     <% topic.bookmarks.each do |b| %>
     <div class="col-md-7"><%= link_to b.url, "#{b.url}" %></div>
+    <% if policy(b).destroy? %>
+    <%= link_to "Delete Bookmark", [b], method: :delete, class: 'btn btn-danger' %>
+    <% end %>
     <% end %>
   </div>
 </div>

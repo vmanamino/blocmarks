@@ -1,8 +1,12 @@
 <h1><%= @topic.title %></h1>
-<%= render partial: 'bookmarks/bookmark', locals: {topic: @topic} %> 
 <% if policy(@topic).edit? %>
-<%= link_to "Edit", edit_topic_path, class: 'btn btn-success' %>
+  <%= link_to "Edit Topic", edit_topic_path, class: 'btn btn-success' %>
 <% end %>
+<%= render partial: 'bookmarks/bookmark', locals: {topic: @topic} %> 
+<% if policy(Bookmark.new).create? %>
+  <%= render partial: 'bookmarks/form', locals: {topic: @topic} %>
+<% end %>
+
 
 
 
