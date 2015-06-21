@@ -1,5 +1,4 @@
 class TopicsController < ApplicationController
-  
   def index
     @topics = Topic.all
     authorize @topics
@@ -9,6 +8,8 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
     @bookmarks = @topic.bookmarks
   end
+
+  before_action :authenticate_user!
 
   def new
     @topic = Topic.new
