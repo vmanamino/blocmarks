@@ -9,19 +9,20 @@ class BookmarksController < ApplicationController
     @topic = Topic.find(params[:topic_id])
   end
 
+  before_action :authenticate_user!
+
   def create
-    @topic = Topic.find(params[:topic_id])
-    @bookmark = current_user.bookmarks.build(params.require(:bookmark).permit(:url)) 
-    @bookmark.topic = @topic
+    @bookmark = current_user.bookmarks.build(params.require(:bookmark).permit(:url))
+    @bookmark.topic = bookmark_topic
     authorize @bookmark
     if @bookmark.save
       redirect_to @topic, notice: 'Your bookmark was saved'
     else
       flash[:error] = 'Your bookmark failed to save, please try again'
-      render :new      
-    end    
+      render :new
+    end
   end
-  
+
   def destroy
     @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.find(params[:id])
@@ -30,15 +31,15 @@ class BookmarksController < ApplicationController
       redirect_to @topic, notice: 'Your bookmark was deleted'
     else
       redirect_to @topic, error: 'Your bookmark failed to delete, please try again'
-  end    
+    end
   end
-  
+
   def edit
     @bookmark = Bookmark.find(params[:id])
     authorize @bookmark
     @topic = Topic.find(params[:topic_id])
   end
-  
+
   def update
     @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.find(params[:id])
@@ -48,5 +49,10 @@ class BookmarksController < ApplicationController
     else
       redirec_to @topic, error: 'Your bookmark failed to update, please try again'
     end
+  end
+
+  def bookmark_topic
+    @topic = Topic.find(params[:topic_id])
+    @topic
   end
 end
