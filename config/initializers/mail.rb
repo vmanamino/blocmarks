@@ -12,19 +12,6 @@ ActionMailer::Base.delivery_method = :smtp
 # for debugging
 ActionMailer::Base.raise_delivery_errors = true
 
-class DevelopmentMailInterceptor
-  def self.delivering_email(message)
-    message.to = 'vmanamino@gmail.com'
-    message.cc = nil
-    message.bcc = nil
-  end
-end
 
-# Locally, outgoing mail will be 'intercepted' by the
-# above DevelopmentMailInterceptor before going out
-
-if Rails.env.development?
-  ActionMailer::Base.register_interceptor(DevelopmentMailInterceptor)
-end
 
 ## !! Still need to setup mailer, but requirements only call for incoming mail
