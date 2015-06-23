@@ -1,4 +1,8 @@
-<h1><%= @topic.title %></h1>
+<h1><%= @topic.title %>
+<% if policy(@topic).destroy? %>
+          <%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: {confirm: "Are you sure you want to delete this topic?"} %>
+<% end %>
+</h1>
 <% if policy(@topic).edit? %>
   <%= link_to "Edit Topic", edit_topic_path, class: 'btn btn-success' %>
 <% end %>
