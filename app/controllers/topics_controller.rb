@@ -16,7 +16,6 @@ class TopicsController < ApplicationController
     authorize @topic
   end
 
-  # before_action :authenticate_user!  Dalibor, when I use this un-authenticated users canot see the index view, I don't understand why?
   def create
     @topic = current_user.topics.build(params.require(:topic).permit(:title))
     authorize @topic
