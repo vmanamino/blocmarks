@@ -3,7 +3,9 @@
   <div style="position: :relative">
     <% topic.bookmarks.each do |b| %>
     <% count += 1 %>
-    <div class="col-md-7"><%= link_to "#{topic.title} URL #{count}", [topic, b] %></div>
+    <div class="col-md-7"><%= link_to "#{topic.title} URL #{count}", [topic, b] %>
+    <%= render partial: 'likes/like', locals: { topic: topic, bookmark: b } %>
+    </div>
     <% end %>
   </div>
 </div>
