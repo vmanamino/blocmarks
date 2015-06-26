@@ -1,4 +1,5 @@
 class LikesController < ApplicationController
+  before_action :authenticate_user!
   def create
     @bookmark = Bookmark.find(params[:bookmark_id])
     @topic = @bookmark.topic
