@@ -1,3 +1,4 @@
+<% if policy(Like.new).create? %>
 <div>
   <% if user_like = current_user.liked(bookmark) %>
   <%= link_to [topic, bookmark, user_like], class: 'btn btn-danger', method: :delete do %>
@@ -9,3 +10,4 @@
     <% end %>
   <% end %>
 </div>
+<% end %>
