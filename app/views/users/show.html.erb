@@ -1,2 +1,32 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @user.name %></h1>
+
+<h3> Bookmarks that I liked </h3>
+    <% @liked_bookmarks_topics.each do |t| %>
+    <h1><%= link_to "#{t.title}", [t] %></h1>
+    <% @liked_bookmarks.each do |b| %>
+      <% if t == b.topic %>
+        <div class="row">
+          <div style="position: :relative">
+            <div class="col-md-7"><%= link_to "#{b.topic.title} URL #{b.id}", [b.topic, b] %>
+            <%= render partial: 'likes/like', locals: { topic: t, bookmark: b } %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      <% end %>     
+    <% end %>
+
+<h3>Bookmarks that I created</h3>
+<% @user_bookmarks_topics.each do |t| %>
+      <h1><%= link_to "#{t.title}", [t] %></h1>
+      <% @user_bookmarks.each do |b| %>
+        <% if t == b.topic %>
+          <div class="row">
+            <div style="position: :relative">
+              <div class="col-md-7"><%= link_to "#{b.topic.title} URL #{b.id}", [b.topic, b] %></div>
+            </div>
+          </div>
+          <% end %>
+        <% end %>     
+      <% end %>
+ 
