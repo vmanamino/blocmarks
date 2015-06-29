@@ -1,28 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a social bookmarking tool.  It enables you to send a URL in a email and have it posted under a topic you include in the subject line of the email.  You can select a new topic or one you currently see on the website: https://viral-blocmarks.herokuapp.com
 
-Things you may want to cover:
+To send a bookmark via email to the app, use the following email address: any@app010cb000286f4b51a7052764ec5b1754.mailgun.org
 
-* Ruby version
+That's long and not very useful, but that's on account of my laziness since I have yet to set up a custom domain.  I created this application as part of my web development apprenticeship and wanted to focus on learning to build the core behaviors and properly meet the requirements that were set out for me, which I did.  But I ignored some important usability aspects, which you will notice in the appearance of the website.   
 
-* System dependencies
+You can sign up to the app and receive permissions to directly post, edit, and delete topics and bookmarks at the website.  Signed up users, too, may like or unline any bookmark.  Already registered users, once they sign in, are directed immediately to their individual profile page.  The profile lays out, grouped by topic, both the bookmarks the user created and the bookmarks the user 'liked.'  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Those who want to clone this should heed the application.example.yml file.  There you see the username and password for Sendgrid, the email service I use for authentication.  You see also the username and password for Mailgun, which I use to receive incoming email.  
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
+
