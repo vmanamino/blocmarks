@@ -1,0 +1,6 @@
+.row
+  %div{:style => "position: :relative"}
+    - topic.bookmarks.each do |b|
+      .col-md-7
+        = link_to "#{topic.title} URL #{b.id}", [topic, b]
+        = render partial: 'likes/like', locals: { topic: topic, bookmark: b }
