@@ -1,0 +1,10 @@
+%h1 All Topics
+- if policy(Topic.new).create?
+  = link_to "New Topic", new_topic_path, class: 'btn btn-success'
+- @topics.each do |topic|
+  .media
+    .media-body
+      %h4.media-heading
+        = link_to topic.title, topic
+      %h5.media-heading
+        = render partial: 'bookmarks/bookmark', locals: {topic: topic}
