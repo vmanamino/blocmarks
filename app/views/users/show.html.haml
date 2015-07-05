@@ -7,7 +7,7 @@
       .row
         %div{:style => "position: :relative"}
           .col-md-7
-            = link_to "#{b.topic.title} URL #{b.id}", [b.topic, b]
+            = link_to get_url_title(b.url), [t, b]
             = render partial: 'likes/like', locals: { topic: t, bookmark: b }
 %h3 Bookmarks that I created
 - @user_bookmarks_topics.each do |t|
@@ -16,4 +16,4 @@
     - if t == b.topic
       .row
         %div{:style => "position: :relative"}
-          .col-md-7= link_to "#{b.topic.title} URL #{b.id}", [b.topic, b]
+          .col-md-7= link_to get_url_title(b.url), [t, b]

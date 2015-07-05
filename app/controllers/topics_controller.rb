@@ -9,6 +9,9 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.friendly.find(params[:id])
     @bookmarks = @topic.bookmarks
+    if request.path != topic_path(@topic) # rubocop:disable
+      redirect_to @topic, status: :moved_permanently
+    end
   end
 
   def new
@@ -37,8 +40,7 @@ class TopicsController < ApplicationController
     @topic.slug = nil
     authorize @topic
     if @topic.update_attributes(params.require(:topic).permit(:title))
-      flash[:notice] = 'Topic was edited successfully'
-      redirect_to @topic
+      redirect_to @topic, notice: 'Topic was edited successfully'
     else
       flash[:error] = 'There was an error saving your topic. Please try again.'
       render :edit
