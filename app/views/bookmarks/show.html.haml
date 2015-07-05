@@ -1,0 +1,13 @@
+%h1= link_to @topic.title, @topic
+%p= link_to get_url_title(@bookmark.url), @bookmark.url
+%p= get_url_description(@bookmark.url)
+%p= raw get_url_video(@bookmark.url)
+
+- if !get_url_video(@bookmark.url)
+  %p= link_to embed_thumbnail(@bookmark.url), @bookmark.url
+
+- if policy(@bookmark).edit?
+  .col-md-8= link_to "Edit Bookmark", edit_topic_bookmark_path(@topic, @bookmark), class: 'btn btn-success'
+%br/
+- if policy(@bookmark).destroy?
+  .col-md-8= link_to "Delete Bookmark", [@topic, @bookmark], method: :delete, class: 'btn btn-danger'

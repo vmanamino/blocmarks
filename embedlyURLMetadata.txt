@@ -1,0 +1,51 @@
+{"provider_url"=>"http://www.radioeins.de", "description"=>"radioeins - nur 
+
+für Erwachsene! EINS mit guter Musik - in Berlin und Potsdam auf FM 95,8 MHz. 
+
+Ein Programm des Rundfunks Berlin-Brandenburg (rbb).", "title"=>"Homepage | 
+
+radioeins", "url"=>"http://www.radioeins.de/homepage/index.html", 
+
+"thumbnail_width"=>980, 
+
+"thumbnail_url"=>"http://www.radioeins.de/content/dam/rbb/rad/bilder0/201507/F
+
+LK_gr_talk.png.png/quality=192.png", "version"=>"1.0", 
+
+"provider_name"=>"Radioeins", "type"=>"link", "thumbnail_height"=>300}
+
+{"provider_url"=>"http://www.youtube.com/", "description"=>"Lyrics: When all 
+
+is said and done I think I'll be one I've got a bucket of blood in my hand And 
+
+I just don't care I wear my thorns for you They cut all the way through This 
+
+is how I do it It takes a lot to it,", "title"=>"Sólstafir - Goddess of the 
+
+Ages (HQ)", "url"=>"http://www.youtube.com/watch?v=UDKBax-griA", 
+
+"author_name"=>"Vojta Bramborák", "height"=>480, "thumbnail_width"=>480, 
+
+"width"=>854, "html"=>"<iframe class=\"embedly-embed\" src=
+
+\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com
+
+%2Fembed%2Fvideoseries%3Flist%3DPLxAxkvDCJe7uqSKT67b1YOshm8lKqXe5U&url=https
+
+%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DUDKBax-griA%26feature%3Dyoutu.be
+
+%26list%3DPLxAxkvDCJe7uqSKT67b1YOshm8lKqXe5U&image=https%3A%2F%2Fi.ytimg.com
+
+%2Fvi%2FUDKBax-griA
+
+%2Fhqdefault.jpg&key=5c30d6485667450d820ae23eae8b3718&type=text
+
+%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" 
+
+frameborder=\"0\" allowfullscreen></iframe>", 
+
+"author_url"=>"http://www.youtube.com/user/robinek999", "version"=>"1.0", 
+
+"provider_name"=>"YouTube", "thumbnail_url"=>"https://i.ytimg.com/vi/UDKBax-
+
+griA/hqdefault.jpg", "type"=>"video", "thumbnail_height"=>360}

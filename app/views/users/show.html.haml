@@ -1,0 +1,19 @@
+%h1= @user.name
+%h3 Bookmarks that I liked
+- @liked_bookmarks_topics.each do |t|
+  %h1= link_to "#{t.title}", [t]
+  - @liked_bookmarks.each do |b|
+    - if t == b.topic
+      .row
+        %div{:style => "position: :relative"}
+          .col-md-7
+            = link_to "#{b.topic.title} URL #{b.id}", [b.topic, b]
+            = render partial: 'likes/like', locals: { topic: t, bookmark: b }
+%h3 Bookmarks that I created
+- @user_bookmarks_topics.each do |t|
+  %h1= link_to "#{t.title}", [t]
+  - @user_bookmarks.each do |b|
+    - if t == b.topic
+      .row
+        %div{:style => "position: :relative"}
+          .col-md-7= link_to "#{b.topic.title} URL #{b.id}", [b.topic, b]
