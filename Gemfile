@@ -64,3 +64,5 @@ gem 'pundit'
 gem 'haml'
 
 gem 'embedly'
+
+gem 'friendly_id', '~> 5.1.0'

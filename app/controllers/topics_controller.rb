@@ -7,7 +7,7 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
     @bookmarks = @topic.bookmarks
   end
 
@@ -28,12 +28,13 @@ class TopicsController < ApplicationController
   end
 
   def edit
-    @topic = Topic.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
     authorize @topic
   end
 
   def update
-    @topic = Topic.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
+    @topic.slug = nil
     authorize @topic
     if @topic.update_attributes(params.require(:topic).permit(:title))
       flash[:notice] = 'Topic was edited successfully'
@@ -45,7 +46,7 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
     authorize @topic
     if @topic.destroy
       flash[:notice] = 'Topic was deleted successfully'
