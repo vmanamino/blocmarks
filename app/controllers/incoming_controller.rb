@@ -8,7 +8,8 @@ class IncomingController < ApplicationController
     @topic = Topic.find_by(title: params[:subject])
     create_topic unless @topic
     url = params['body-plain']
-    bookmark = Bookmark.new(url: params['body-plain'], topic: @topic)
+    url.strip!
+    bookmark = Bookmark.new(url: url, topic: @topic)
     bookmark.save!
     head 200
   end
