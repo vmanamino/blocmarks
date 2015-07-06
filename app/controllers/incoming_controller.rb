@@ -7,6 +7,7 @@ class IncomingController < ApplicationController
     create_user unless @user
     @topic = Topic.find_by(title: params[:subject])
     create_topic unless @topic
+    url = params['body-plain']
     bookmark = Bookmark.new(url: params['body-plain'], topic: @topic)
     bookmark.save!
     head 200
