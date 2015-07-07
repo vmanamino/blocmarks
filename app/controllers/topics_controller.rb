@@ -7,8 +7,11 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
     @bookmarks = @topic.bookmarks
+    if request.path != topic_path(@topic) # rubocop:disable Style/GuardClause
+      redirect_to @topic, status: :moved_permanently
+    end
   end
 
   def new
@@ -28,16 +31,16 @@ class TopicsController < ApplicationController
   end
 
   def edit
-    @topic = Topic.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
     authorize @topic
   end
 
   def update
-    @topic = Topic.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
+    @topic.slug = nil
     authorize @topic
     if @topic.update_attributes(params.require(:topic).permit(:title))
-      flash[:notice] = 'Topic was edited successfully'
-      redirect_to @topic
+      redirect_to @topic, notice: 'Topic was edited successfully'
     else
       flash[:error] = 'There was an error saving your topic. Please try again.'
       render :edit
@@ -45,7 +48,7 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
     authorize @topic
     if @topic.destroy
       flash[:notice] = 'Topic was deleted successfully'
