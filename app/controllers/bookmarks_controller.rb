@@ -13,7 +13,7 @@ class BookmarksController < ApplicationController
     @topic = bookmark_topic
   end
 
-  def create # rubocop:disable
+  def create # rubocop:disable Metrics/AbcSize
     @bookmark = current_user.bookmarks.build(params.require(:bookmark).permit(:url))
     @bookmark.topic = bookmark_topic
     authorize @bookmark

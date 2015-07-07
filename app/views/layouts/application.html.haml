@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    %title Blocmarks
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .container
+      %ul.nav.nav-tabs
+        %li= link_to "Blocmarks", root_path
+        %li= link_to "About", about_path
+        %li= link_to "Topics", topics_path
+        .pull-right.user-info
+          - if current_user
+            Hello 
+            = link_to (current_user.email || current_user.name), current_user
+            = link_to user_path(current_user), class: 'btn btn-primary btn-sm' do
+              %span.glyphicon.glyphicon-user
+            Hello
+            = current_user.email
+            \!
+            = link_to "Sign out", destroy_user_session_path, method: :delete
+          - else
+            = link_to "Sign In", new_user_session_path
+            or
+            = link_to "Sign Up", new_user_registration_path
+      - if flash[:notice]
+        .alert.alert-success
+          %button.close{"data-dismiss" => "alert", :type => "button"} ×
+          = flash[:notice]
+      - elsif flash[:error]
+        .alert.alert-danger
+          %button.close{"data-dismiss" => "alert", :type => "buton"} ×
+          = flash[:error]
+      - elsif flash[:alert]
+        .alert.alert-warning
+          %button.close{"data-dismiss" => "alert", :type => "button"} ×
+          = flash[:alert]
+      = yield
+    

@@ -9,7 +9,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.friendly.find(params[:id])
     @bookmarks = @topic.bookmarks
-    if request.path != topic_path(@topic) # rubocop:disable
+    if request.path != topic_path(@topic) # rubocop:disable Style/GuardClause
       redirect_to @topic, status: :moved_permanently
     end
   end

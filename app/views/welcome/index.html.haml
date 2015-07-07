@@ -1,0 +1,21 @@
+%br/
+.jumbotron
+  %h1 Blocmarks
+  %p Blocmarks is a resource for sharing links with your friends!
+  %p
+    = link_to "Sign In", new_user_session_path, class: 'btn btn-primary'
+    or
+    = link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary'
+    today!
+.row
+  .col-md-4
+    %h2 Via email or direct
+    %p This app is a social bookmarking tool.  It enables you to send a URL in a email and have it posted under a topic you include in the subject line of the email.  You can select a new topic or one you currently see on the website under Topics (above)
+  .col-md-4
+    %h2 Email Bookmarks
+    %p To send a bookmark via email to the app, use the following email address provided by Mailgun: 
+    = mail_to "any@app010cb000286f4b51a7052764ec5b1754.mailgun.org", "Mailgun Addon"
+  .col-md-3
+    %h2 User Profiles
+    %p You can sign up to the app and receive permissions to directly post, edit, and delete topics and bookmarks at the website.  Signed up users, too, may like or unline any bookmark.  Already registered users, once they sign in, are directed immediately to their individual profile page.  The profile lays out, grouped by topic, both the bookmarks the user created and the bookmarks the user 'liked.' 
+
