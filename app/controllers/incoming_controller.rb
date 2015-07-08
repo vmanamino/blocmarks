@@ -5,7 +5,7 @@ class IncomingController < ApplicationController
   def create
     @user = User.find_by(email: params[:sender])
     create_user unless @user
-    @topic = Topic.find_by(title: params[:subject])
+    @topic = Topic.friendly.find_by(title: params[:subject])
     create_topic unless @topic
     url = params['body-plain']
     url.strip!
