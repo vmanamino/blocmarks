@@ -15,3 +15,18 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+var blocmetrics = {};
+blocmetrics.report = function(eventName){
+  var event = { name: eventName };
+  var request = new XMLHttpRequest();
+  request.open("POST", "http://philter-108461.nitrousapp.com:4000/api/events", true);
+  request.setRequestHeader('Accept', 'application/json');
+//   request.send({'name':'page'})
+  request.send(JSON.stringify(event));
+};
+
+window.onload = function() {
+//    alert("helo");
+  blocmetrics.report("Page reload");
+};

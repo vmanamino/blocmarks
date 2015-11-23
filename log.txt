@@ -1,0 +1,99 @@
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:08 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:08 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-ef7d25aac0b86172a87b85524aee8c460024bb56ff2645aa998862d3ee118591.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:08 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/topics" for 50.17.182.190 at 2015-11-23 05:30:21 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  Rendered likes/_like.html.haml (0.3ms)
+  Rendered likes/_like.html.haml (0.2ms)
+  Rendered likes/_like.html.haml (0.2ms)
+  Rendered likes/_like.html.haml (0.2ms)
+  Rendered bookmarks/_bookmark.html.haml (124.1ms)
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered likes/_like.html.haml (0.2ms)
+  Rendered likes/_like.html.haml (0.2ms)
+  Rendered likes/_like.html.haml (0.2ms)
+  Rendered likes/_like.html.haml (0.3ms)
+  Rendered bookmarks/_bookmark.html.haml (154.4ms)
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
+  Rendered likes/_like.html.haml (0.3ms)
+  Rendered likes/_like.html.haml (0.2ms)
+  Rendered likes/_like.html.haml (0.2ms)
+  Rendered bookmarks/_bookmark.html.haml (92.0ms)
+  Rendered topics/index.html.haml within layouts/application (376.4ms)
+Completed 200 OK in 458ms (Views: 456.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/likes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bookmarks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-ec82a09d218a0573f03e36c5238d7eaa2fe4ba318fba85200424314e9be37cad.css?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bookmarks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/likes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-ef7d25aac0b86172a87b85524aee8c460024bb56ff2645aa998862d3ee118591.js?body=1" for 50.17.182.190 at 2015-11-23 05:30:22 +0000
+Cannot render console from 50.17.182.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
