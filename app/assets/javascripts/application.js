@@ -20,9 +20,10 @@ var blocmetrics = {};
 blocmetrics.report = function(eventName){
   var event = { name: eventName };
   var request = new XMLHttpRequest();
-  request.open("POST", "http://philter-108461.nitrousapp.com:4000/api/events", true);
+  request.open("POST", "http://philter-108461.nitrousapp.com:3000/api/events", true);
   request.setRequestHeader('Accept', 'application/json');
-//   request.send({'name':'page'})
+//   request.setRequestHeader('Content-Type', 'application/json')
+//   request.send("name":"page reload");
   request.send(JSON.stringify(event));
 };
 
