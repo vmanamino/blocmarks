@@ -17,21 +17,26 @@
 //= require_tree .
 
 var blocmetrics = {};
+
 blocmetrics.report = function(eventName){
   var event = { name: eventName };
+
   var request = new XMLHttpRequest();
-  request.open("POST", "http://philter-108461.nitrousapp.com:3000/api/events/", true);
-  request.setRequestHeader('Accept', 'application/json');
-  request.onreadystatechange = function() {
-  };
-//   request.setRequestHeader('Content-length', event.length);
-//   request.setRequestHeader('Content-Type', 'application/json')
-//   request.send();
-//   request.send(JSON.stringify({ name: "load" }));
-  request.send('{"name":"foobar"}');
+  request.open("POST", "http://philter-108461.nitrousapp.com:3000/api/events", true);
+  request.setRequestHeader('Content-Type', 'application/json');
+
+  request.send(JSON.stringify(event));
+}
+
+// example of JavaScript to track specific events of your app
+
+window.onload = init;
+
+function init() {
+  var topics = document.getElementById("topics");
+  topics.onclick = topicviews;
 };
 
-window.onload = function() {
-//    alert("helo");
-  blocmetrics.report("Page reload");
+function topicviews(){
+  blocmetrics.report('topics views');
 };
