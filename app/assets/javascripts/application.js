@@ -38,5 +38,5 @@ function init() {
 };
 
 function topicviews(){
-  blocmetrics.report('topics views today');
+  blocmetrics.report('topics views charted');
 };
